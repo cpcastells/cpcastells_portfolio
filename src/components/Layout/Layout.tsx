@@ -10,7 +10,9 @@ const Layout = ({
   className = "",
 }: LayoutProps): React.ReactElement => {
   return (
-    <div className={`w-full h-full inline-block z-0 bg-light p-32${className}`}>
+    <div
+      className={`w-full h-full inline-block z-0 bg-light p-32 ${className}`}
+    >
       {children}
     </div>
   );
