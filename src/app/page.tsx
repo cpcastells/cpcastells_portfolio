@@ -3,6 +3,8 @@ import Image from "next/image";
 import room from "../../public/images/room.webp";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Link from "next/link";
+import ReachMe from "@/components/HireMe/HireMe";
+import HireMe from "@/components/HireMe/HireMe";
 
 export default function Home() {
   return (
@@ -65,6 +67,7 @@ export default function Home() {
           </div>
         </div>
       </Layout>
+      <HireMe />
     </main>
   );
 }
