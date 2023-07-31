@@ -3,7 +3,6 @@ import Image from "next/image";
 import room from "../../public/images/room.webp";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Link from "next/link";
-import ReachMe from "@/components/HireMe/HireMe";
 import HireMe from "@/components/HireMe/HireMe";
 
 export default function Home() {
@@ -21,8 +20,8 @@ export default function Home() {
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
             <AnimatedText
-              text="<Carles Pueyo/>"
-              className="text-6xl text-left"
+              text="Carles Pueyo"
+              className="text-7xl text-left"
             ></AnimatedText>
             <p className="my-4 text-lg font-medium">
               As a full-stack developer, my portfolio features a variety of
