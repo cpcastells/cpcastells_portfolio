@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 describe("Given a Logo component", () => {
   describe("When it is rendered", () => {
-    test("Then it should show the text CP", () => {
+    test("Then it should show a link with the text CP", () => {
       const expectedText = "cp";
 
       render(<Logo />);
