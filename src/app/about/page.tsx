@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "@/components/Layout/Layout";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import profilePicture from "../../../public/images/cp.webp";
+import Skills from "@/components/skills/Skills";
 
 export const metadata: Metadata = {
   title: "Know about me",
@@ -70,6 +71,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Skills />
       </Layout>
     </main>
   );

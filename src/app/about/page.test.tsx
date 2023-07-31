@@ -3,6 +3,17 @@ import { render, screen } from "@testing-library/react";
 import About from "./page";
 
 describe("Given an About page", () => {
+  beforeEach(() => {
+    const mockIntersectionObserver = jest.fn();
+    mockIntersectionObserver.mockReturnValue({
+      observe: () => null,
+      unobserve: () => null,
+      disconnect: () => null,
+    });
+
+    window.IntersectionObserver = mockIntersectionObserver;
+  });
+
   describe("When it is rendered", () => {
     test("Then it should show a heading with the text'discovering new horizons'", () => {
       const expectedText = /discovering new horizons/i;
@@ -30,6 +41,7 @@ describe("Given an About page", () => {
   describe("When it is rendered", () => {
     test("Then it should show a picture of Carles Pueyo", () => {
       const expectedAltText = /carles pueyo/i;
+
       render(<About />);
 
       const picture = screen.getByAltText(expectedAltText);
