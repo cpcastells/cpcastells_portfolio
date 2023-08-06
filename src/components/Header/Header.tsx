@@ -3,10 +3,13 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import CustomLink from "../CustomLink/CustomLink";
-import { GithubIcon, LinkedInIcon } from "../Icons/Icons";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "../Icons/Icons";
 import { motion } from "framer-motion";
+import useTheme from "@/hooks/useTheme";
 
 const Header = () => {
+  const [mode, setMode] = useTheme();
+
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -36,6 +39,16 @@ const Header = () => {
         >
           <LinkedInIcon />
         </motion.a>
+        <button
+          className={`w-fit p-2 rounded-md hover:scale-110 active:scale-100 text-sm duration-200`}
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        >
+          {mode === "light" ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
