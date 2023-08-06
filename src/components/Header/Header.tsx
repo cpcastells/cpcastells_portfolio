@@ -11,7 +11,7 @@ const Header = () => {
   const [mode, setMode] = useTheme();
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
@@ -34,13 +34,15 @@ const Header = () => {
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className="w-6 mr-3"
+          className="w-6 mx-3"
           aria-label="linkedin icon"
         >
           <LinkedInIcon />
         </motion.a>
         <button
-          className={`w-fit p-2 rounded-md hover:scale-110 active:scale-100 text-sm duration-200`}
+          className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
         >
           {mode === "light" ? (

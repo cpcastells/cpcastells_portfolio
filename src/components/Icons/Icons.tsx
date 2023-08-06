@@ -49,7 +49,7 @@ export const CircularText = ({ className, ...rest }: SVGProps) => {
       viewBox="0 0 1080 1080"
       width={1080}
       height={1080}
-      className={`w-full h-auto ${className}`}
+      className={`w-full h-auto fill-light ${className}`}
       {...rest}
     >
       <defs>

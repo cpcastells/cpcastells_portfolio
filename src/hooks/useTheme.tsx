@@ -32,6 +32,8 @@ const useTheme = (): [string, React.Dispatch<React.SetStateAction<string>>] => {
       }
     };
 
+    handleChange();
+
     mediaQuery.addEventListener("change", handleChange);
 
     return () => mediaQuery.removeEventListener("change", handleChange);
