@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const Projects = (): React.ReactElement => {
   return (
-    <main className="w-full mb-16 flex flex-col items-center justify-center">
+    <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
       <Layout className="pt-16">
         <AnimatedText text="Portfolio" className="text-8xl mb-16" />
         <div className="grid grid-cols-12 gap-24 gap-y-32">
