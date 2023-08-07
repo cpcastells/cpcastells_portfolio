@@ -121,7 +121,7 @@ const Header = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href={"https:/linkedin.com/in/carlespueyodeveloper"}
+              href={"https://linkedin.com/in/carlespueyodeveloper"}
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
