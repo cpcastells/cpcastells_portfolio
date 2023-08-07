@@ -4,8 +4,8 @@ import HireMe from "./HireMe";
 
 describe("Given a HireMe component", () => {
   describe("When it is rendered", () => {
-    test("Then it should show a link with the text 'hire me", () => {
-      const expectedText = /hire me/i;
+    test("Then it should show a link with the text 'email", () => {
+      const expectedText = /email/i;
 
       render(<HireMe />);
 
