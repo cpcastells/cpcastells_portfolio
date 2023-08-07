@@ -81,43 +81,41 @@ const Header = () => {
         </nav>
       </div>
       {isOpen ? (
-        <div
+        <motion.div
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ scale: 1, opacity: 1 }}
           className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
       bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <nav className="flex flex-col items-center justify-center">
             <CustomMobileLink
               title="Home"
-              className="mr-4"
               href={"/"}
               toggleOpen={handleClick}
             />
             <CustomMobileLink
               title="About"
-              className="mx-4"
               href={"/about"}
               toggleOpen={handleClick}
             />
             <CustomMobileLink
               href="/projects"
               title="Projects"
-              className="mx-4"
               toggleOpen={handleClick}
             />
             <CustomMobileLink
               href="/contact"
               title="Contact"
-              className="ml-4"
               toggleOpen={handleClick}
             />
           </nav>
-          <nav className="flex items-center justify-center flex-wrap">
+          <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
               href={"https://github.com/cpcastells"}
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3"
+              className="w-6 mr-3 bg-light rounded-full dark:bg-dark"
               aria-label="github icon"
             >
               <GithubIcon />
@@ -145,7 +143,7 @@ const Header = () => {
               )}
             </button>
           </nav>
-        </div>
+        </motion.div>
       ) : null}
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
