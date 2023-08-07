@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import router from "next/router";
 import React from "react";
 
 interface CustomMobileLinkProps {
