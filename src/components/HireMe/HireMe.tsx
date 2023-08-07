@@ -13,7 +13,7 @@ const HireMe = (): React.ReactElement => {
           text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark 
           dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
         >
-          Hire me
+          Email
         </Link>
       </div>
     </div>
