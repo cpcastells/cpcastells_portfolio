@@ -15,7 +15,8 @@ export default function Home() {
               src={room}
               alt={"geek room"}
               priority={true}
-              className="max-w-[500px] w-full h-auto"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              className="w-full h-auto"
             ></Image>
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
