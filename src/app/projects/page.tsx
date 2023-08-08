@@ -10,11 +10,6 @@ import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
 import Project from "@/components/Project/Project";
 import HireMe from "@/components/HireMe/HireMe";
 
-export const metadata: Metadata = {
-  title: "My Projects",
-  description: "Information about my portfolio's projects",
-};
-
 const Projects = (): React.ReactElement => {
   const [windowWidth, setWindowWidth] = useState(0);
 

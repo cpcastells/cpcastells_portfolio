@@ -9,11 +9,6 @@ import profilePicture from "../../../public/images/cp.webp";
 import Skills from "@/components/skills/Skills";
 import HireMe from "@/components/HireMe/HireMe";
 
-export const metadata: Metadata = {
-  title: "Know about me",
-  description: "Information about Carles Pueyo",
-};
-
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
