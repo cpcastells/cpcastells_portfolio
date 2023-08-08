@@ -7,29 +7,29 @@ import HireMe from "@/components/HireMe/HireMe";
 
 export default function Home() {
   return (
-    <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-      <Layout className="pt-0 md:p-16 sm:pt-8">
+    <main className="flex items-center text-dark w-full dark:text-light">
+      <Layout className="pt-0 md:p-16 xl:pt-0 sm:pt-8">
+        <AnimatedText
+          text="Hi! I'm"
+          className="text-6xl mt-16 text-center xl:text-5xl lg:text-6xl md:mt-12 sm:text-3xl sm:mt-7"
+        ></AnimatedText>
+        <AnimatedText
+          text="Carles Pueyo"
+          className="text-8xl text-[#6495EC] dark:text-primaryDark inline text-center mb-16 xl:text-6xl lg:text-6xl md:mb-12 
+          sm:text-4xl sm:mb-7"
+        ></AnimatedText>
         <div className="flex items-center justify-between w-full gap-10 lg:flex-col">
-          <div className="w-1/2 md:w-full">
-            <Image
-              src={room}
-              alt={"geek room"}
-              priority={true}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-              className="w-full h-auto lg:hidden md:inline-block md:w-full"
-            ></Image>
-          </div>
-          <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
-            <AnimatedText
-              text="Carles Pueyo"
-              className="text-7xl text-left xl:text-5xl lg:text-center lg:text-6xl md:text-5xl sm:text-3xl"
-            ></AnimatedText>
-            <p className="my-4 text-lg font-medium md:text-sm sm:text-xs">
+          <div className="w-1/2 flex flex-col items-start lg:w-full lg:text-center lg:items-center">
+            <p className="my-4 text-lg font-medium md:text-base">
               As a full-stack developer, my portfolio features a variety of
-              projects, with a primary focus on React development. Explore my
-              work to see the creative applications I&apos;ve built. Don&apos;t
-              hesitate to reach out for collaboration or any questions you may
-              have.
+              projects, with a primary focus on React development.
+            </p>
+            <p className="my-4 text-lg font-medium md:text-base">
+              Explore my work to see the creative applications I&apos;ve built.
+            </p>
+            <p className="my-4 text-lg font-medium md:text-base">
+              Don&apos;t hesitate to reach out for collaboration or any
+              questions you may have.
             </p>
             <div className="flex items-center self-start pt-[15px] gap-5 lg:self-center">
               <Link
@@ -67,6 +67,15 @@ export default function Home() {
                 Contact
               </Link>
             </div>
+          </div>
+          <div className="flex justify-center w-1/2 md:w-full">
+            <Image
+              src={room}
+              alt={"geek room"}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              className="w-[60%] h-auto md:inline-block lg:w-full"
+            ></Image>
           </div>
         </div>
       </Layout>

@@ -27,7 +27,7 @@ const CustomMobileLink = ({
   return (
     <button
       type="button"
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light dark:text-dark my-3`}
       onClick={handleClick}
     >
       {title}

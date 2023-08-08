@@ -19,22 +19,22 @@ const Header = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button
-        className="flex-col justify-center items-center hidden lg:flex"
+        className="flex-col justify-center items-center hidden lg:flex mt-3"
         onClick={handleClick}
       >
         <span
-          className={`bg-dark dark:bg-light transition-all duration-300 block h-0.5 w-6 rounded-sm ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+          className={`bg-dark dark:bg-light transition-all duration-300 block h-1 w-12 rounded-sm ${
+            isOpen ? "rotate-45 translate-y-1.5" : "-translate-y-1.5"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light transition-all duration-300 block h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-dark dark:bg-light transition-all duration-300 block h-1 w-12 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-1"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light transition-all duration-300 block h-0.5 w-6 rounded-sm ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+          className={`bg-dark dark:bg-light transition-all duration-300 block h-1 w-12 rounded-sm ${
+            isOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-1.5"
           }`}
         ></span>
       </button>
@@ -109,13 +109,13 @@ const Header = () => {
               toggleOpen={handleClick}
             />
           </nav>
-          <nav className="flex items-center justify-center flex-wrap mt-2">
+          <nav className="flex items-center justify-center flex-wrap mt-10">
             <motion.a
               href={"https://github.com/cpcastells"}
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 bg-light rounded-full dark:bg-dark"
+              className="w-12 mr-3 bg-light rounded-full dark:bg-dark"
               aria-label="github icon"
             >
               <GithubIcon />
@@ -125,13 +125,13 @@ const Header = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
+              className="w-12 mx-3"
               aria-label="linkedin icon"
             >
               <LinkedInIcon />
             </motion.a>
             <button
-              className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+              className={`ml-3 flex items-center justify-center rounded-full p-1 w-12 ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

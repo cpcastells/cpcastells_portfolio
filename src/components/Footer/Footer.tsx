@@ -24,9 +24,6 @@ const Footer = (): React.ReactElement => {
             Carles Pueyo
           </Link>
         </div>
-        <Link href="/" className="underline underline-offset-2" target="_blank">
-          Say hello
-        </Link>
       </Layout>
     </footer>
   );
