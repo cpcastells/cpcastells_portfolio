@@ -1,11 +1,14 @@
+"use client";
+
 import { Metadata } from "next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Layout from "@/components/Layout/Layout";
 import collectopia from "../../../public/images/projects/collectopia.webp";
 import packsplorer from "../../../public/images/projects/packsplorer.webp";
 import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
 import Project from "@/components/Project/Project";
+import HireMe from "@/components/HireMe/HireMe";
 
 export const metadata: Metadata = {
   title: "My Projects",
@@ -13,6 +16,22 @@ export const metadata: Metadata = {
 };
 
 const Projects = (): React.ReactElement => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
       <Layout className="pt-16">
@@ -42,6 +61,7 @@ const Projects = (): React.ReactElement => {
           </div>
         </div>
       </Layout>
+      {windowWidth <= 767 && <HireMe />}
     </main>
   );
 };

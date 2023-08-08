@@ -1,10 +1,13 @@
+"use client";
+
 import { Metadata } from "next";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "@/components/Layout/Layout";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import profilePicture from "../../../public/images/cp.webp";
 import Skills from "@/components/skills/Skills";
+import HireMe from "@/components/HireMe/HireMe";
 
 export const metadata: Metadata = {
   title: "Know about me",
@@ -12,6 +15,22 @@ export const metadata: Metadata = {
 };
 
 const About = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <main className="flex w-full flex-col items-center justify-center dark:text-light">
       <Layout className="pt-16">
@@ -93,6 +112,7 @@ const About = () => {
         </div>
         <Skills />
       </Layout>
+      {windowWidth <= 767 && <HireMe />}
     </main>
   );
 };
