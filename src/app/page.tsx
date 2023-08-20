@@ -8,7 +8,7 @@ import HireMe from "@/components/HireMe/HireMe";
 export default function Home() {
   return (
     <main className="flex items-center text-dark w-full dark:text-light min-h-screen">
-      <Layout className="pt-0 md:p-16 xl:pt-0 sm:pt-8">
+      <Layout className="m-auto pt-0 md:p-16 xl:pt-0 sm:pt-8">
         <AnimatedText
           text="Hi! I'm"
           className="text-6xl mt-16 text-center xl:text-5xl lg:text-6xl md:mt-12 sm:text-3xl sm:mt-7"
