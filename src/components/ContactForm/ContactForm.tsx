@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 interface ContactFormProps {
@@ -14,7 +14,9 @@ export const ContactForm = ({
   serviceId,
   templateId,
 }: ContactFormProps) => {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement | null>(null);
+  const [isSent, setIsSent] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const sendEmail = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -26,9 +28,19 @@ export const ContactForm = ({
     emailjs.sendForm(serviceId, templateId, currentForm, publicKey).then(
       (result) => {
         console.log(result.text);
+        setIsSent(true);
+        setTimeout(() => {
+          setIsSent(false);
+        }, 3000);
+        currentForm.reset();
       },
       (error) => {
+        setIsError(true);
         console.log(error.text);
+        setTimeout(() => {
+          setIsError(false);
+        }, 3000);
+        currentForm.reset();
       }
     );
   };
@@ -38,7 +50,7 @@ export const ContactForm = ({
       className="w-full relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 
           dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8"
     >
-      <div className="absolute top-1 -right-[1.1rem] -z-10 w-[101%] h-[101%] rounded-[2rem] bg-dark dark:bg-light" />
+      <div className="absolute top-1 -right-4 -z-10 w-[101%] h-[101%] rounded-[2rem] bg-dark dark:bg-light" />
 
       <form
         ref={form}
@@ -89,10 +101,25 @@ export const ContactForm = ({
         <button
           type="submit"
           value="Send"
-          className="rounded-lg mt-5 p-2 px-6 font-semibold text-light border bg-dark dark:text-dark dark:bg-light"
+          className="rounded-lg my-5 p-2 px-6 font-semibold text-light border bg-dark dark:text-dark dark:bg-light"
         >
           Send
         </button>
+        {isError && (
+          <div className="bg-red-200 p-4 rounded-lg">
+            <p className="text-center text-lg font-bold text-red-700">
+              Oops! Something went wrong. Please, try again later.
+            </p>
+          </div>
+        )}
+        {isSent && (
+          <div className="bg-green-200 p-4 rounded-lg">
+            <p className="text-center text-lg font-bold text-green-700">
+              Your message has been successfully sent. Thank you for getting in
+              touch!
+            </p>
+          </div>
+        )}
       </form>
     </div>
   );
