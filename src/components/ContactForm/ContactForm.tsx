@@ -56,7 +56,7 @@ export const ContactForm = ({
             type="text"
             id="username"
             name="user_name"
-            className="p-3 rounded-lg"
+            className="p-3 rounded-lg border border-solid border-dark"
           />
         </div>
         <div className="w-full flex flex-col gap-2 pt-5">
@@ -70,7 +70,7 @@ export const ContactForm = ({
             type="email"
             id="email"
             name="user_email"
-            className="p-3 rounded-lg"
+            className="p-3 rounded-lg border border-solid border-dark"
           />
         </div>
         <div className="w-full flex flex-col gap-2 pt-5">
@@ -83,7 +83,7 @@ export const ContactForm = ({
           <textarea
             id="message"
             name="message"
-            className="h-72 p-4 rounded-lg"
+            className="h-72 p-4 rounded-lg border border-solid border-dark"
           />
         </div>
         <button
