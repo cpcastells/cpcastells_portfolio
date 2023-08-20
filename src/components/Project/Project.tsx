@@ -49,7 +49,7 @@ const Project = ({ github, img, link, title, type }: FeaturedProjectProps) => {
           >
             Visit
           </Link>
-          <Link href={github} target="_blank" className="w-8 md:w-6">
+          <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
         </div>

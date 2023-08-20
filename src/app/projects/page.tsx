@@ -1,11 +1,12 @@
 "use client";
 
-import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Layout from "@/components/Layout/Layout";
 import collectopia from "../../../public/images/projects/collectopia.webp";
 import packsplorer from "../../../public/images/projects/packsplorer.webp";
+import portfolio from "../../../public/images/projects/portfolio.webp";
+import splitify from "../../../public/images/projects/splitify.webp";
 import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
 import Project from "@/components/Project/Project";
 import HireMe from "@/components/HireMe/HireMe";
@@ -50,8 +51,28 @@ const Projects = (): React.ReactElement => {
               github="https://github.com/cpcastells/packsplorer-react"
               title="Packsplorer"
               link="https://packsplorer.netlify.app/"
-              type="Web App"
+              type="Side-Project"
               img={packsplorer}
+            />
+          </div>
+          <div className="col-span-12">
+            <FeaturedProject
+              github="https://github.com/cpcastells/cpcastells_portfolio"
+              title="Portfolio"
+              link="https://carles-pueyo-portfolio.netlify.app/"
+              summary="Check out my personal portfolio built with Next.js and Tailwind CSS. Featuring responsive design and a sleek dark mode."
+              type="Featured project"
+              img={portfolio}
+            />
+          </div>
+          <div className="col-span-12">
+            <FeaturedProject
+              github="https://github.com/cpcastells/splitify-react"
+              title="Splitify"
+              link="https://splitify-app.netlify.app/"
+              summary="A web app project for effortless management of shared expenses among friends. Track debts and credits with ease, keeping everyone on the same page. "
+              type="Featured project"
+              img={splitify}
             />
           </div>
         </div>
