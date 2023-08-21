@@ -15,7 +15,7 @@ export default function Home() {
         ></AnimatedText>
         <AnimatedText
           text="Carles Pueyo"
-          className="text-8xl text-[#6495EC] dark:text-primaryDark inline text-center mb-16 xl:text-6xl lg:text-6xl md:mb-12 
+          className="text-8xl text-[#5184db] dark:text-primaryDark inline text-center mb-16 xl:text-6xl lg:text-6xl md:mb-12 
           sm:text-4xl sm:mb-7"
         ></AnimatedText>
         <div className="flex items-center justify-between w-full gap-10 lg:flex-col">

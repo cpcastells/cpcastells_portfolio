@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "../Icons/Icons";
 
-interface FeaturedProjectProps {
+interface ProjectProps {
   type: string;
   title: string;
   summary?: string;
@@ -11,7 +11,7 @@ interface FeaturedProjectProps {
   github: string;
 }
 
-const Project = ({ github, img, link, title, type }: FeaturedProjectProps) => {
+const Project = ({ github, img, link, title, type, summary }: ProjectProps) => {
   return (
     <article
       className="w-full flex flex-col item-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative
@@ -41,6 +41,7 @@ const Project = ({ github, img, link, title, type }: FeaturedProjectProps) => {
             {title}
           </h2>
         </Link>
+        <p>{summary}</p>
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
             href={github}
