@@ -51,28 +51,29 @@ const Projects = (): React.ReactElement => {
               github="https://github.com/cpcastells/packsplorer-react"
               title="Packsplorer"
               link="https://packsplorer.netlify.app/"
-              type="Side-Project"
+              type="Side Project"
               img={packsplorer}
+              summary="PackSplorer is an interactive, user-friendly application designed to aid in travel preparation. This application allows to create a personalized packing checklist for your trips."
+            />
+          </div>
+          <div className="col-span-6 sm:col-span-12">
+            <Project
+              github="https://github.com/cpcastells/splitify-react"
+              title="Splitify"
+              link="https://splitify-app.netlify.app/"
+              type="Side Project"
+              img={splitify}
+              summary="A web app project for effortless management of shared expenses among friends. Track debts and credits with ease, keeping everyone on the same page."
             />
           </div>
           <div className="col-span-12">
             <FeaturedProject
               github="https://github.com/cpcastells/cpcastells_portfolio"
               title="Portfolio"
-              link="https://carles-pueyo-portfolio.netlify.app/"
+              link="https://carlespueyo.dev/"
               summary="Check out my personal portfolio built with Next.js and Tailwind CSS. Featuring responsive design and a sleek dark mode."
-              type="Featured project"
+              type="Side-project"
               img={portfolio}
-            />
-          </div>
-          <div className="col-span-12">
-            <FeaturedProject
-              github="https://github.com/cpcastells/splitify-react"
-              title="Splitify"
-              link="https://splitify-app.netlify.app/"
-              summary="A web app project for effortless management of shared expenses among friends. Track debts and credits with ease, keeping everyone on the same page. "
-              type="Featured project"
-              img={splitify}
             />
           </div>
         </div>
